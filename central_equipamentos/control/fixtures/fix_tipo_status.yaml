@@ -1,0 +1,45 @@
+- model: control.status
+  pk: 1
+  fields:
+    nome: Operacional
+    descricao: Equipamento está em pleno funcionamento e disponível para uso.
+- model: control.status
+  pk: 2
+  fields:
+    nome: Em Manutenção
+    descricao: Equipamento está sendo mantido ou verificado para garantir o seu funcionamento adequado.
+- model: control.status
+  pk: 3
+  fields:
+    nome: Em Reparação
+    descricao: Equipamento está sendo consertado após uma falha ou defeito identificado.
+- model: control.status
+  pk: 4
+  fields:
+    nome: Inativo
+    descricao: Equipamento não está em uso e não está disponível para uso imediato.
+- model: control.status
+  pk: 5
+  fields:
+    nome: Obsoleto
+    descricao: Equipamento foi descontinuado e não é mais utilizado ou suportado.
+- model: control.status
+  pk: 6
+  fields:
+    nome: Em Espera de Peças
+    descricao: Equipamento está aguardando a chegada de peças para completar uma reparação ou manutenção.
+- model: control.status
+  pk: 7
+  fields:
+    nome: Calibração Pendente
+    descricao: Equipamento precisa ser calibrado antes de poder ser utilizado de forma confiável.
+- model: control.status
+  pk: 8
+  fields:
+    nome: Desativado
+    descricao: Equipamento foi desligado permanentemente e não está mais em uso.
+- model: control.status
+  pk: 9
+  fields:
+    nome: Em Teste
+    descricao: Equipamento está passando por testes para verificar seu desempenho e segurança antes de ser utilizado.

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Informações do Equipamento Médico</title>
+    <link rel="stylesheet" href="../css/style-equip.css">
+    <link rel="stylesheet" href="../css/style-hist-manutencao.css">
+</head>
+<body>
+    
+    <header>
+        <h1>Informações do Equipamento Médico</h1>
+        <div class="buttons">
+            <button id="historico-manutencoes-btn">Histórico de Manutenções</button>
+            <button id="historico-transicao-btn">Histórico de Transição</button>
+            <button id="cadastrar-manutencoes-btn">Cadastrar Manutenções</button>
+        </div>
+    </header>
+    <div class="main-container">
+        <div id="equipamento-detalhes" class="equipment-info"></div>
+        <div id="transicao-container" class="main-container hidden">
+            <!-- Seção de histórico de transições de setor -->
+            <section class="transition-history">
+                <div class="faixa">
+                    <h2>Histórico de Transições de Setor</h2>
+                </div>
+                <table class="history-table">
+                    <thead>
+                        <tr>
+                            <th>Setor Anterior</th>
+                            <th>Data de Entrada</th>
+                            <th>Setor Atual </th>
+                            <th>Data de Saída</th>
+                            <th>Tempo decorrido</th>
+                            <th>Responsável</th>
+                        </tr>
+                    </thead>
+                    <tbody id="transicao-setor-list">
+                        <!-- Tabela será preenchida com dados do histórico de transições -->
+                    </tbody>
+                </table>
+            </section>
+        </div>
+        <!-- Div para exibir o calendário -->
+        <div id="calendar-container" class="main-container hidden">
+            <div class="faixa">
+                <h2>Histórico de Manutenções</h2>
+            </div>
+            <div id="calendar"></div>
+        </div>
+
+        <!-- Modal para exibir detalhes de eventos -->
+        <div id="eventModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2 id="modal-title">Título do Evento</h2>
+                <p><strong>Data:</strong> <span id="modal-date"></span></p>
+                <p><strong>Anotações:</strong> <span id="modal-notes"></span></p>
+            </div>
+        </div>
+    </div>
+     <!-- Modal para cadastrar manutenção -->
+    <div id="manutencao-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2 class="modal-title">Cadastrar Manutenção</h2>
+            <form id="manutencao-form">
+                <label for="equipamento-id">Equipamento:</label>
+                <select id="equipamento-id" name="equipamento-id" required></select>
+                
+                <label for="data-manutencao">Data da Manutenção:</label>
+                <input type="date" id="data-manutencao" name="data" required>
+                
+                <label for="tipo-manutencao">Tipo de Manutenção:</label>
+                <select id="tipo-manutencao" name="tipo-manutencao" required></select>
+                
+                <label for="anotacoes">Anotações:</label>
+                <textarea id="anotacoes" name="anotacoes" maxlength="150" required></textarea>
+                
+                <div class="modal-buttons">
+                    <button type="button" id="manutencao-cadastrar-btn">Cadastrar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.15/index.global.min.js'></script>
+    <script src="../js/cad-manutencao.js"></script>
+    <script src="../js/equipamento-detalhes.js"></script>
+    
+    
+</body>
+</html>
+

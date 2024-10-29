@@ -1,0 +1,182 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@700&display=swap');
+
+body {
+    font-family: 'Nunito', sans-serif;
+    background-color: #e0e1dd;
+    color: #0d1b2a;
+    margin: 0;
+}
+/* Estilo para a coluna */
+.column {
+    padding: 20px;
+}
+.header-container {
+    display: flex;
+    /* justify-content: space-between; */
+    align-items: center;
+    margin-bottom: 10px;
+    justify-content: flex-start; /* Garante que os itens estejam alinhados à esquerda */
+}
+.header {
+    width: 100%; /* Garante que o contêiner ocupe toda a largura */
+    display: flex; 
+    justify-content: center; /* Centraliza horizontalmente o conteúdo */
+    align-items: center; /* Alinha verticalmente o conteúdo, se necessário */
+    padding: 20px 0; /* Espaçamento acima e abaixo do header */
+}
+/* Estilo para o botão */
+header {
+    background-color: #1B263B;
+    color: white;
+    padding: 5px;
+    text-align: center;
+}
+
+/* Estilo para a imagem */
+
+.image {
+    display: block;
+    margin: 0 auto; /* Centraliza horizontalmente */
+    width: 150px; /* Ajuste o tamanho da imagem conforme necessário */
+    height: 150px;
+    margin-bottom: 10px;
+}
+
+
+/* Remove a cor azul padrão e o sublinhado dos links */
+#equipment-list a {
+    color: inherit; /* Mantém a cor do texto herdada do elemento pai */
+    text-decoration: none; /* Remove o sublinhado */
+}
+
+/* Opcional: adicione um efeito de hover para melhor interação */
+#equipment-list a:hover {
+    color: #333; /* Define a cor desejada no hover (alterar se necessário) */
+    text-decoration: underline; /* Opcional: sublinhado no hover */
+}
+
+.column {
+    background-color: #415a77; 
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 22%;
+    height: 400px;
+    overflow-y: auto; /* Adiciona barra de rolagem vertical */
+    padding: 10px; /* Espaçamento interno */
+    box-sizing: border-box; /* Inclui o padding dentro da largura/altura */
+    border: 3px solid #1B263B; /* Opcional: borda para visualização */
+    flex: 1;
+    margin: 0 15px;
+    display: flex;
+    flex-direction: column;
+
+}
+/* Estilo para o container */
+.container {
+    display: flex;
+    justify-content: space-between; /* Garante que as colunas se distribuam */
+    gap: 20px; /* Adiciona um espaçamento de 20px entre as colunas */
+    margin-top: 50px;
+}
+
+
+/* Títulos das colunas */
+.column-title {
+    color: #ffffff; /* Exemplo: branco */
+}
+
+/* Títulos dos modais */
+.modal-title {
+    color: #1b263b; /* Exemplo: verde */
+}
+
+
+h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    background-color: #a8aaa3;
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    overflow-y: auto; /* Habilita a barra de rolagem */
+    max-height: 200px; /* Define uma altura fixa para a lista */
+    border: 1px solid #1b263b;
+    border-radius: 5px;
+    padding: 10px;
+}
+.button {
+    background-color: transparent; /* Remove o fundo do botão */
+    border: none; /* Remove a borda do botão */
+    cursor: pointer;
+    padding: 0; /* Remove o espaçamento interno */
+    margin-left: 10px; /* Adiciona espaço entre o título e o botão */
+    display: inline-flex; /* Exibe o botão como flexbox para alinhar conteúdo */
+    align-items: center; /* Centraliza a imagem dentro do botão */
+    justify-content: center; /* Centraliza a imagem no botão */
+}
+
+.button img {
+    width: 20px; /* Ajuste o tamanho da imagem conforme necessário */
+    height: 20px;
+}
+
+header .buttons {
+    text-align: right;
+    margin-bottom: 20px;
+    display: flex;            /* Torna os botões flexíveis */
+    justify-content: center;  /* Centraliza os botões horizontalmente */
+    gap: 20px;                /* Espaçamento entre os botões */
+    margin-top: 20px;
+}
+
+header .buttons button {
+    background-color: #415A77;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin-left: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+
+
+/* Estilo da barra de rolagem para navegadores WebKit (Chrome, Safari) */
+ul::-webkit-scrollbar {
+    width: 12px; /* Largura da barra de rolagem */
+}
+
+/* Fundo da barra de rolagem */
+ul::-webkit-scrollbar-track {
+    background: #415a77; /* Cor do fundo da barra */
+    border-radius: 10px; /* Deixar os cantos arredondados */
+}
+
+/* Barra deslizante */
+ul::-webkit-scrollbar-thumb {
+    background-color: #888; /* Cor da barra deslizante */
+    border-radius: 10px; /* Cantos arredondados */
+    border: 3px solid #415a77; /* Borda ao redor da barra */
+}
+
+/* Barra deslizante ao passar o mouse */
+ul::-webkit-scrollbar-thumb:hover {
+    background-color: #555; /* Cor da barra deslizante ao passar o mouse */
+}

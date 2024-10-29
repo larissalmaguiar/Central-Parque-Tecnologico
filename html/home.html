@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestão de Parque Hospitalar</title>
+
+
+    <link rel="stylesheet" href="../css/style-principal.css">
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Central de Parque Tecnológico</h1>
+        <div class="buttons">
+            <button id="equi-manu-btn">Manutenções por Equipamentos</button>
+            <button id="equi-trans-btn">Transições por equipamentos</button>
+        </div>
+    </header>
+
+    <div class="container">
+        
+
+            <!-- Equipamento Column -->
+            <div class="column">
+                <div class="header-container">
+                    <h2 class="column-title">Equipamento</h2>
+                    <button class="button" id="equipamento-btn">
+                        <img src="../imagens/mais.png" alt="Icone de Equipamento" class="button-icon">
+                    </button>
+                </div>
+                <img class="image" src="../imagens/tomografia.png" alt="Equipamento">
+                <ul id="equipment-list">
+
+                </ul>
+            </div>
+
+
+            <!-- Funcionários Column -->
+            <div class="column">
+                <div class="header-container">
+                    <h2 class="column-title">Funcionários</h2>
+                    <button class="button" id="funcionario-btn">
+                        <img src="../imagens/mais.png" alt="Icone de funcionarios" class="button-icon">
+                    </button>
+                </div>
+                <img class="image" src="../imagens/funcionario.png" alt="Funcionário">
+
+                <!-- Lista de funcionários que será preenchida -->
+                <ul id="employee-list">
+                </ul>
+            </div>
+
+            <!-- Setor Column -->
+            <div class="column">
+                <div class="header-container">
+                    <h2 class="column-title">Setor</h2>
+                    <button class="button" id="setor-btn">
+                        <img src="../imagens/mais.png" alt="Icone de setor" class="button-icon">
+                    </button>
+                </div>
+                <img class="image" src="../imagens/pc.png" alt="Setor">
+                <ul id="sector-list">
+                </ul>
+            </div>
+
+            <!-- Fabricante Column -->
+            <div class="column">
+                <div class="header-container">
+                    <h2 class="column-title">Fabricante</h2>
+                    <button class="button" id="fabricante-btn">
+                        <img src="../imagens/mais.png" alt="Icone de fabricante" class="button-icon">
+                    </button>
+                </div>
+                <img class="image" src="../imagens/maca.png" alt="Fabricante">
+                <ul id="fabricante-list">
+                </ul>
+            </div>
+    </div>
+
+    <!-- Modal Equipamento -->
+    <div id="equipamento-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2 class="modal-title">Cadastrar Equipamento</h2>
+            <form id="equipamento-form">
+                <label for="equipamento-nome">Nome do Equipamento:</label>
+                <input type="text" id="equipamento-nome" name="equipamento-nome" required>
+                <label for="equipamento-tipo">Fabricante do Equipamento:</label>
+                <select id="equipamento-fabricante" name="equipamento-fabricante" required></select>
+                <label for="equipamento-tipo">Tipo do Equipamento:</label>
+                <select id="equipamento-tipo" name="equipamento-tipo" required></select>
+                <label for="equipamento-modelo">Modelo do Equipamento:</label>
+                <input type="text" id="equipamento-modelo" name="equipamento-modelo" required>
+                <label for="equipamento-nserie">Número de série do Equipamento:</label>
+                <input type="text" id="equipamento-nserie" name="equipamento-nserie" required>
+                <label for="equipamento-data-aquisicao">Data de aquisição:</label>
+                <input type="date" id="equipamento-data-aquisicao" name="data">
+                <label for="equipamento-data-garantia">Data de garantia:</label>
+                <input type="date" id="equipamento-data-garantia" name="data">
+                <label for="equipamento-tag">Tag de identificação do Equipamento:</label>
+                <input type="text" id="equipamento-tag" name="equipamento-tag" required>
+                <label for="equipamento-status">Status Operacional do Equipamento:</label>
+                <select id="equipamento-status" name="equipamento-status" required></select>
+
+                <div class="modal-buttons">
+                    <button type="button" id="equipamento-cadastrar-btn">Cadastrar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Modal Funcionarios -->
+    <div id="funcionario-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2 class="modal-title">Cadastrar Funcionário</h2>
+            <form id="funcionario-form">
+                <label for="nome">Nome do funcionário:</label>
+                <input type="text" id="nome" name="nome" required>
+                <label for="matricula">Matrícula:</label>
+                <input type="text" id="matricula" name="matricula" required>
+                <div class="modal-buttons">
+                    <button type="button" id="funcionario-cadastrar-btn">Cadastrar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Modal Setor -->
+    <div id="setor-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2 class="modal-title">Cadastrar Setor</h2>
+            <form id="setor-form">
+                <label for="setor-nome">Nome do Setor:</label>
+                <input type="text" id="setor-nome" name="setor-nome" required>
+                <label for="setor-responsavel">Responsável:</label>
+                <select id="setor-responsavel" name="setor-responsavel" required></select>
+                <div class="modal-buttons">
+                    <button type="button" id="setor-cadastrar-btn">Cadastrar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+    <!-- Modal Fabricante -->
+    <div id="fabricante-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2 class="modal-title">Cadastrar Fabricante</h2>
+            <form id="fabricante-form">
+                <label for="nome">Nome do Fabricante:</label>
+                <input type="text" id="nome-fabricante" name="nome-fabricante" required>
+                <div class="modal-buttons">
+                    <button type="button" id="fabricante-cadastrar-btn">Cadastrar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <!-- Modal para informações do fabricante -->
+    <div id="fabricante-modal-edit" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div class="button-setor-equi">
+                <h2>Informações do Fabricante</h2>
+                <button type="button" id="equipamentos-fabricante-btn">Equipamentos do Fabricante</button>
+            </div>
+            <form id="fabricante-form">
+                <label for="fabricante-nome">Nome:</label>
+                <input type="text" id="fabricante-nome" name="nome" readonly>
+                <div class="modal-buttons">
+                    <button type="button" id="edit-fabricante-btn">Editar</button>
+                    <button type="button" id="save-fabricante-btn" style="display:none;">Salvar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <!-- Modal para informações do setor -->
+    <div id="setor-modal-edit" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+
+            
+            <div class="button-setor-equi">
+                <h2>Informações do Setor</h2>
+                <button type="button" id="equipamentos-setor-btn">Equipamentos no Setor</button>
+            </div>
+            <form id="setor-form">
+                <label for="setor-nome">Nome:</label>
+                <input type="text" id="setor-nome-edit" name="nome" readonly>
+                
+                <label for="setor-responsavel">Responsável:</label>
+                <select id="setor-responsavel-edit" name="responsavel" disabled>
+                </select>
+                <div class="modal-buttons">
+                    <button type="button" id="edit-setor-btn">Editar</button>
+                    <button type="button" id="save-setor-btn" style="display:none;">Salvar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    
+    <!-- Modal para editar funcionario -->
+    <div id="funcionario-modal-edit" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Informações do Funcionário</h2>
+            <form id="setor-form">
+                <label for="funcionario-nome">Nome:</label>
+                <input type="text" id="funcionario-nome-edit" name="nome" readonly>
+                <label for="funcionario-matricula">Matricula:</label>
+                <input type="text" id="funcionario-matricula-edit" name="nome" readonly>
+                <div class="modal-buttons">
+                    <button type="button" id="edit-funcionario-btn">Editar</button>
+                    <button type="button" id="save-funcionario-btn" style="display:none;">Salvar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    
+    <script src="../js/fabricante.js"></script>
+    <script src="../js/cad-fabricante.js"></script>
+    <script src="../js/cad-equipamento.js"></script>
+    <script src="../js/setor-edit.js"></script>
+    <script src="../js/setor.js"></script>
+    <script src="../js/edit-funcionario.js"></script>
+    <script src="../js/funcionarios.js"></script>
+</body>
+
+</html>

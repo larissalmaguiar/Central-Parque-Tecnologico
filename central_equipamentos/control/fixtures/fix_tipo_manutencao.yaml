@@ -1,0 +1,16 @@
+- model: control.TipoManutencao
+  pk: 1
+  fields:
+    nome: Corretiva
+    background_color: '#F44336'
+- model: control.TipoManutencao
+  pk: 2
+  fields:
+    nome: Preventiva
+    background_color: '#4CAF50'
+- model: control.TipoManutencao
+  pk: 3
+  fields:
+    nome: Preditiva
+    background_color: '#2196F3'
+

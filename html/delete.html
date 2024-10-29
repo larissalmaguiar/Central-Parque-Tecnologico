@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Central de Parque Tecnologico</title>
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous"> -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="title-container">
+                <h1>Central de Parque Tecnológico</h1>
+            </div>
+        </div>
+        <div class="content">
+            <div class="buttons">
+                <button class="btn" id="cadastros-btn" aria-expanded="false" aria-controls="cadastros-options">Cadastros</button>
+                <button class="btn">Encontrar Equipamento</button>
+                <div class="cadastros-options" id="cadastros-options">
+                    <button class="sub-btn" id="equipamento-btn">Equipamento</button>
+                    <button class="sub-btn" id="funcionario-btn">Funcionário</button>
+                    <button class="sub-btn" id="fabricante-btn">Fabricante</button>
+                    <button class="sub-btn" id="setor-btn">Setor</button>
+                </div>                
+            </div>
+        </div>
+    </div>
+
+     <!-- Modal Funcionarios -->
+     <div id="funcionario-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Cadastrar Funcionário</h2>
+            <form id="funcionario-form">
+                <label for="nome">Nome do funcionário:</label>
+                <input type="text" id="nome" name="nome" required>
+                <label for="matricula">Matrícula:</label>
+                <input type="text" id="matricula" name="matricula" required>
+                <div class="modal-buttons">
+                    <button type="button" id="funcionario-cadastrar-btn">Cadastrar</button>
+                </div>
+            </form>            
+        </div>
+    </div>
+     <!-- Modal Fabricante -->
+     <div id="fabricante-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Cadastrar Fabricante</h2>
+            <form id="fabricante-form">
+                <label for="nome">Nome do Fabricante:</label>
+                <input type="text" id="nome-fabricante" name="nome-fabricante" required>
+                <div class="modal-buttons">
+                    <button type="button" id="fabricante-cadastrar-btn">Cadastrar</button>
+                </div>
+            </form>            
+        </div>
+    </div>
+     <!-- Modal setor -->
+    <div id="setor-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Cadastrar Setor</h2>
+            <form id="setor-form">
+                <label for="setor-nome">Nome do Setor:</label>
+                <input type="text" id="setor-nome" name="setor-nome" required>
+                <label for="setor-responsavel">Responsável:</label>
+                <select id="setor-responsavel" name="setor-responsavel" required></select>
+                <div class="modal-buttons">
+                    <button type="button" id="setor-cadastrar-btn">Cadastrar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+    <!-- Equipamentos setor -->
+    <div id="equipamento-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Cadastrar Equipamento</h2>
+            <form id="equipamento-form">
+                <label for="equipamento-nome">Nome do Equipamento:</label>
+                <input type="text" id="equipamento-nome" name="equipamento-nome" required>
+                <label for="equipamento-tipo">Fabricante do Equipamento:</label>
+                <select id="equipamento-fabricante" name="equipamento-fabricante" required></select>
+                <label for="equipamento-tipo">Tipo do Equipamento:</label>
+                <select id="equipamento-tipo" name="equipamento-tipo" required></select>
+                <label for="equipamento-modelo">Modelo do Equipamento:</label>
+                <input type="text" id="equipamento-modelo" name="equipamento-modelo" required>
+                <label for="equipamento-nserie">Número de série do Equipamento:</label>
+                <input type="text" id="equipamento-nserie" name="equipamento-nserie" required>
+                <label for="equipamento-data-aquisicao">Data de aquisição:</label>
+                <input type="date" id="equipamento-data-aquisicao" name="data">
+                <label for="equipamento-data-garantia">Data de garantia:</label>
+                <input type="date" id="equipamento-data-garantia" name="data">
+                <label for="equipamento-tag">Tag de identificação do Equipamento:</label>
+                <input type="text" id="equipamento-tag" name="equipamento-tag" required>
+                <label for="equipamento-status">Status Operacional do Equipamento:</label>
+                <select id="equipamento-status" name="equipamento-status" required></select>
+
+                <div class="modal-buttons">
+                    <button type="button" id="equipamento-cadastrar-btn">Cadastrar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <!-- Modal para informações do fabricante -->
+<div id="fabricante-modal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Informações do Fabricante</h2>
+        <form id="fabricante-form">
+            <label for="fabricante-nome">Nome:</label>
+            <input type="text" id="fabricante-nome" name="nome" readonly>
+            
+            <button type="button" id="edit-fabricante-btn">Editar</button>
+            <button type="submit" id="save-fabricante-btn" style="display:none;">Salvar</button>
+        </form>
+    </div>
+</div>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script> -->
+    <script src="js/script.js"></script>
+    <script src="js/cad-fabricante.js"></script>
+    <script src="js/cad-equipamento.js"></script>
+</body>
+</html>

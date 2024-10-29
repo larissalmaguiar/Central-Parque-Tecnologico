@@ -1,0 +1,144 @@
+- model: control.TipoEquipamentos
+  pk: 1
+  fields:
+    nome: Aparelho de Raio-X
+
+- model: control.TipoEquipamentos
+  pk: 2
+  fields:
+    nome: Ultrassom
+
+- model: control.TipoEquipamentos
+  pk: 3
+  fields:
+    nome: Ressonância Magnética (MRI)
+
+- model: control.TipoEquipamentos
+  pk: 4
+  fields:
+    nome: Tomografia Computadorizada (TC)
+
+- model: control.TipoEquipamentos
+  pk: 5
+  fields:
+    nome: ECG (Eletrocardiograma)
+
+- model: control.TipoEquipamentos
+  pk: 6
+  fields:
+    nome: Bomba de Infusão
+
+- model: control.TipoEquipamentos
+  pk: 7
+  fields:
+    nome: Ventilador Mecânico
+
+- model: control.TipoEquipamentos
+  pk: 8
+  fields:
+    nome: Diálise
+
+- model: control.TipoEquipamentos
+  pk: 9
+  fields:
+    nome: Laser Cirúrgico
+
+- model: control.TipoEquipamentos
+  pk: 10
+  fields:
+    nome: Monitor de Sinais Vitais
+
+- model: control.TipoEquipamentos
+  pk: 11
+  fields:
+    nome: Oxímetro de Pulso
+
+- model: control.TipoEquipamentos
+  pk: 12
+  fields:
+    nome: Monitor de Glicose
+
+- model: control.TipoEquipamentos
+  pk: 13
+  fields:
+    nome: Capnógrafo
+
+- model: control.TipoEquipamentos
+  pk: 14
+  fields:
+    nome: Desfibrilador
+
+- model: control.TipoEquipamentos
+  pk: 15
+  fields:
+    nome: Incubadora Neonatal
+
+- model: control.TipoEquipamentos
+  pk: 16
+  fields:
+    nome: Máquina de Circulação Extracorpórea
+
+- model: control.TipoEquipamentos
+  pk: 17
+  fields:
+    nome: Andadores e Cadeiras de Rodas
+
+- model: control.TipoEquipamentos
+  pk: 18
+  fields:
+    nome: Próteses e Órteses
+
+- model: control.TipoEquipamentos
+  pk: 19
+  fields:
+    nome: Equipamento de Terapia Ocupacional
+
+- model: control.TipoEquipamentos
+  pk: 20
+  fields:
+    nome: Autoclaves
+
+- model: control.TipoEquipamentos
+  pk: 21
+  fields:
+    nome: Lavadoras Desinfetadoras
+
+- model: control.TipoEquipamentos
+  pk: 22
+  fields:
+    nome: Mesas Cirúrgicas
+
+- model: control.TipoEquipamentos
+  pk: 23
+  fields:
+    nome: Iluminação Cirúrgica
+
+- model: control.TipoEquipamentos
+  pk: 24
+  fields:
+    nome: Instrumentos Cirúrgicos
+
+- model: control.TipoEquipamentos
+  pk: 25
+  fields:
+    nome: Câmera Endoscópica
+
+- model: control.TipoEquipamentos
+  pk: 26
+  fields:
+    nome: Mamógrafo
+
+- model: control.TipoEquipamentos
+  pk: 27
+  fields:
+    nome: Centrífuga
+
+- model: control.TipoEquipamentos
+  pk: 28
+  fields:
+    nome: Microscópio
+
+- model: control.TipoEquipamentos
+  pk: 29
+  fields:
+    nome: Analisadores de Sangue
